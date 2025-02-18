@@ -4,7 +4,6 @@
 #include <unordered_map>
 #include <vector>
 #include <memory>
-#include <Core/Block.h>
 #include <Storages/StorageInMemoryMetadata.h>
 #include <Storages/MergeTree/GinIndexStore.h>
 #include <Storages/MergeTree/MergeTreeDataPartChecksum.h>
@@ -16,11 +15,11 @@
 #include "config.h"
 
 constexpr auto INDEX_FILE_PREFIX = "skp_idx_";
-constexpr auto IMPLICITLY_ADDED_MINMAX_INDEX_PREFIX = "auto_minmax_index_";
 
 namespace DB
 {
 
+class Block;
 struct MergeTreeWriterSettings;
 
 namespace ErrorCodes
